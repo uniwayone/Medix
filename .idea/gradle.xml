@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../Gradle/gradle-7.4.2" />
+        <option name="gradleJvm" value="1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/features" />
+            <option value="$PROJECT_DIR$/features/auth-feature" />
+            <option value="$PROJECT_DIR$/features/base-feature" />
+            <option value="$PROJECT_DIR$/features/call-commons-feature" />
+            <option value="$PROJECT_DIR$/features/core-feature" />
+            <option value="$PROJECT_DIR$/features/message-feature" />
+            <option value="$PROJECT_DIR$/features/navigation-feature" />
+            <option value="$PROJECT_DIR$/features/requests-feature" />
+            <option value="$PROJECT_DIR$/features/video-call-feature" />
+            <option value="$PROJECT_DIR$/features/voice-call-feature" />
+            <option value="$PROJECT_DIR$/libraries" />
+            <option value="$PROJECT_DIR$/libraries/auth-lib" />
+            <option value="$PROJECT_DIR$/libraries/communication-lib" />
+            <option value="$PROJECT_DIR$/libraries/constants-lib" />
+            <option value="$PROJECT_DIR$/libraries/controller-lib" />
+            <option value="$PROJECT_DIR$/libraries/crypto-lib" />
+            <option value="$PROJECT_DIR$/libraries/data-lib" />
+            <option value="$PROJECT_DIR$/libraries/di-base-lib" />
+            <option value="$PROJECT_DIR$/libraries/fcm-api-lib" />
+            <option value="$PROJECT_DIR$/libraries/firebase-commons-lib" />
+            <option value="$PROJECT_DIR$/libraries/location-lib" />
+            <option value="$PROJECT_DIR$/libraries/models-commons-lib" />
+            <option value="$PROJECT_DIR$/libraries/network-lib" />
+            <option value="$PROJECT_DIR$/libraries/payment-lib" />
+            <option value="$PROJECT_DIR$/libraries/room-lib" />
+            <option value="$PROJECT_DIR$/libraries/userdetails-lib" />
+            <option value="$PROJECT_DIR$/libraries/utils-lib" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

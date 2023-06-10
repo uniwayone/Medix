@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.slyworks.message_feature">
+
+    <application
+        android:theme="@style/Theme.Medix">
+
+        <activity android:name=".message.MessageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.message"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+
+            <intent-filter>
+                <action android:name="app.slyworks.message_feature.MessageActivity.open" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+    </application>
+</manifest>

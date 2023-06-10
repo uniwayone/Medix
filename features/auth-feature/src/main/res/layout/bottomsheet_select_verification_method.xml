@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:paddingTop="24dp"
+    android:paddingBottom="12dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Account Successfully created"
+        android:textStyle="bold"
+        android:textSize="24sp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Only thing left now is to verify your account!"
+        android:textSize="18sp"/>
+
+    <app.slyworks.base_feature.custom_views.SelectionItemView
+        android:id="@+id/siv_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:siv_title="Verify via Email"
+        app:siv_title_color="@color/appBlue"
+        app:siv_sub_title="Verify your account by clicking a link provided in a verification email that would be sent to the email address entered during registration."
+        app:siv_active_outline_color="@color/appCardBlue"
+        app:siv_sub_title_color="@color/appDarkGrey"/>
+
+    <app.slyworks.base_feature.custom_views.SelectionItemView
+        android:id="@+id/siv_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:siv_title="Verify via OTP"
+        app:siv_title_color="@color/appBlue"
+        app:siv_sub_title="Verify your account by entering a One Time Password (OTP) that would be sent to the phone number entered during registration"
+        app:siv_active_outline_color="@color/appCardBlue"
+        app:siv_sub_title_color="@color/appDarkGrey"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_proceed"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn_login_selector"
+        android:enabled="false"
+        android:fontFamily="@font/chivo_regular"
+        android:stateListAnimator="@xml/btn_state_list_animator"
+        android:text="proceed"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,50 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+apply from: "${rootProject.projectDir}/dependencies.gradle"
+
+android {
+    compileSdk sdk_details.compileSDK
+
+    defaultConfig {
+        minSdk sdk_details.minSDK
+        targetSdk sdk_details.targetSDK
+
+        testInstrumentationRunner appTestRunners.default
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled sdk_details.minifyEnabled
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            minifyEnabled sdk_details.minifyEnabled
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation project(path: ':libraries:di-base-lib')
+
+    implementation impl_depends.core_ktx
+    implementation impl_depends.rxjava
+
+    implementation impl_depends.dagger
+    kapt kapt_depends.dagger_kapt
+
+    testImplementation test_depends.junit
+}

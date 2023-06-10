@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="170dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_1_schedule_frag_home"
+        android:layout_width="match_parent"
+        android:layout_height="146dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardBackgroundColor="@color/appRVBlue2"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfile_layout_schedule_frag_home"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvName_layout_schedule_frag_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/ivProfile_layout_schedule_frag_home"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivProfile_layout_schedule_frag_home"
+                app:layout_constraintBottom_toTopOf="@id/tvProfileDetails_layout_schedule_frag_home"
+                app:layout_constraintHorizontal_bias="0"
+                android:layout_marginStart="16dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/appGrey"
+                android:text="Dr. Joshua Sylvanus"/>
+
+            <TextView
+                android:id="@+id/tvProfileDetails_layout_schedule_frag_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/ivProfile_layout_schedule_frag_home"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvName_layout_schedule_frag_home"
+                app:layout_constraintBottom_toBottomOf="@id/ivProfile_layout_schedule_frag_home"
+                app:layout_constraintHorizontal_bias="0"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="16sp"
+                android:textColor="@color/appGrey"
+                android:text="Dentist" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvProfileDetails_layout_schedule_frag_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:cardBackgroundColor="#797DEA"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="8dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/ivCalendar_layout_schedule_frag_home"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:src="@drawable/ic_calendar"
+                        app:tint="@color/appGrey" />
+
+                    <TextView
+                        android:id="@+id/tvDate_layout_schedule_frag_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toEndOf="@id/ivCalendar_layout_schedule_frag_home"
+                        app:layout_constraintTop_toTopOf="@id/ivCalendar_layout_schedule_frag_home"
+                        app:layout_constraintBottom_toBottomOf="@id/ivCalendar_layout_schedule_frag_home"
+                        android:layout_marginStart="4dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Monday, July 14"
+                        android:textSize="15sp"
+                        android:textColor="@color/appGrey"/>
+
+                    <ImageView
+                        android:id="@+id/ivTime_layout_schedule_frag_home"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:layout_constraintStart_toEndOf="@id/tvDate_layout_schedule_frag_home"
+                        app:layout_constraintTop_toTopOf="@id/ivCalendar_layout_schedule_frag_home"
+                        app:layout_constraintBottom_toBottomOf="@id/ivCalendar_layout_schedule_frag_home"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/ic_waiting"
+                        app:tint="@color/appGrey"/>
+
+                    <TextView
+                        android:id="@+id/tvTime_layout_schedule_frag_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toEndOf="@id/ivTime_layout_schedule_frag_home"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/ivCalendar_layout_schedule_frag_home"
+                        app:layout_constraintBottom_toBottomOf="@id/ivCalendar_layout_schedule_frag_home"
+                        app:layout_constraintHorizontal_bias="0"
+                        android:layout_marginStart="4dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="12:00 PM"
+                        android:textSize="15sp"
+                        android:textColor="@color/appGrey" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_2_schedule_frag_home"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toEndOf="@id/guide_vertical_1"
+        app:layout_constraintEnd_toStartOf="@id/guide_vertical_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="12dp"
+        app:cardBackgroundColor="#C1C3FB"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="4dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_3_schedule_frag_home"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toEndOf="@id/guide_vertical_3"
+        app:layout_constraintEnd_toStartOf="@id/guide_vertical_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardBackgroundColor="#ECEDFE"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="2dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_vertical_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".04"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_vertical_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".96"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_vertical_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".08"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_vertical_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".92"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

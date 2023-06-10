@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="White">#fff</color>
+    <color name="Grey">#c3c3c3 </color>
+
+    <!--real work colors-->
+    <color name="appBlue">#FE2172</color>
+    <color name="appBlue_light">#EF538C</color>
+
+    <!--for Network Notifier-->
+    <color name="appBackground">#323030</color>
+    <color name="appRed">#FF1744</color>
+
+    <color name="appWhite">#FFF</color>
+    <color name="appBlack">#000</color>
+    <color name="appPink">#E891E3</color>
+    <color name="appTextColor">#232E65</color>
+    <color name="appTextColor2">#B3B5E7</color>
+    <color name="appCardBlue">#3A4D7F</color>
+    <color name="appTransparent">#00000000</color>
+    <color name="appGrey">#F5F9FF</color>
+    <color name="appTextColor3">#232E65</color>
+
+    <color name="appPink_dark">#813A75</color>
+    <color name="appBlue_pressed">#2154D6</color>
+
+    <color name="appPink_FAB">#FEDBD0</color>
+    <color name="appGrey_shimmer">#dddddd</color>
+    <color name="appPurple_FAB">#EA80FC</color>
+    <color name="appGrey_icon">#403D3D</color>
+
+    <color name="appRVBlue">#8C9EFF</color>
+    <color name="appRVYellow">#FFFF8D</color>
+    <color name="appRVPink">#FF80AB</color>
+    <color name="appRVGreen">#A7FFEB</color>
+    <color name="appRVPurple">#880E4F</color>
+    <color name="appRVOrange">#E65100</color>
+    <color name="appGreen">#00E676</color>
+    <color name="appSmoothBNV_blue">#6B8ADC</color>
+    <color name="appWhite_card">#F6F3F3</color>
+
+    <color name="appBlack_semi">#31131313</color>
+    <color name="appBlack_semi2">#11131313</color>
+    <color name="appGreen_text">#00E676</color>
+    <color name="appGrey_li_message_from">#99999C</color>
+    <color name="appBlue_li_message_to">#6681E8</color>
+    <color name="appBlue_dark">#AD7672</color>
+    <color name="appBlue_pressed2">#C11353</color>
+    <color name="appBlue2">#575CE5</color>
+    <color name="appRVBlue2">#575CE5</color>
+    <color name="appDarkGrey">#B8B8B8</color>
+    <color name="appOrange">#FFB300</color>
+</resources>

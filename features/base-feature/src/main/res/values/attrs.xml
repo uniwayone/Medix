@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CurvedView">
+        <attr name="curvedView_backgroundColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="SelectionItemView">
+        <attr name="siv_title" format="string"/>
+        <attr name="siv_sub_title" format="string"/>
+        <attr name="siv_title_color" format="color"/>
+        <attr name="siv_sub_title_color" format="color"/>
+        <attr name="siv_active_outline_color" format="color"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.slyworks.base_feature">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+
+    <application
+        android:theme="@style/Theme.Medix">
+
+
+        <receiver
+            android:name="app.slyworks.base_feature.broadcast_receivers.CloudMessageBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="app.slyworks.medix.BROADCAST_CLOUD_MESSAGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="app.slyworks.base_feature.broadcast_receivers.VideoCallRequestBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="app.slyworks.medix.BROADCAST_VIDEO_CALL_REQUEST" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="app.slyworks.base_feature.broadcast_receivers.VoiceCallRequestBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="app.slyworks.medix.BROADCAST_VOICE_CALL_REQUEST" />
+            </intent-filter>
+        </receiver>
+
+    <service
+        android:name="app.slyworks.base_feature.services.MFirebaseMessagingService"
+        android:description="@string/appservice_description_text"
+        android:exported="false"
+        android:stopWithTask="false">
+        <intent-filter>
+            <action android:name="com.google.firebase.MESSAGING_EVENT" />
+        </intent-filter>
+    </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/appGrey" />
+
+
+        <service
+        android:name="app.slyworks.base_feature.services.ListenerService"
+        android:description="@string/appservice_description_text"
+        android:exported="false"
+        android:stopWithTask="false" />
+
+   <!-- <service
+        android:name=".NavigationService"
+        android:foregroundServiceType="location">
+
+        &lt;!&ndash; Any inner elements would go here. &ndash;&gt;
+    </service>-->
+
+    </application>
+</manifest>

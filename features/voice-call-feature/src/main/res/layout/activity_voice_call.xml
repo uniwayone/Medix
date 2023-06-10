@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.slyworks.voice_call_feature.VoiceCallActivity"
+    app:layout_optimizationLevel="standard|barrier"
+    android:background="#051B10">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivProfile_activity_voice_call"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:layout_constraintStart_toEndOf="@id/guide_vertical_5"
+        app:layout_constraintEnd_toStartOf="@id/guide_vertical_4"
+        app:layout_constraintTop_toBottomOf="@id/guide_horizontal_1"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tvName_activity_voice_call"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivProfile_activity_voice_call"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        tools:text="Joshua Sylvanus"/>
+
+    <TextView
+        android:id="@+id/tvCallTime_activity_voice_call"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName_activity_voice_call"
+        android:layout_marginTop="8dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        tools:text="connected: 1:00:00"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDeclineCall_activity_voice_call"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="@id/guide_vertical_5"
+        app:layout_constraintEnd_toEndOf="@id/guide_vertical_5"
+        app:layout_constraintBottom_toTopOf="@id/guide_horizontal_2"
+        android:src="@drawable/ic_call_end"
+        android:tint="@color/white"
+        android:backgroundTint="@color/appRed"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        app:maxImageSize="25dp"
+        app:fabCustomSize="60dp"
+        tools:visibility="gone"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAcceptCall_activity_voice_call"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="@id/guide_vertical_4"
+        app:layout_constraintEnd_toEndOf="@id/guide_vertical_4"
+        app:layout_constraintBottom_toTopOf="@id/guide_horizontal_2"
+        android:src="@drawable/ic_voice_call"
+        android:tint="@color/white"
+        android:backgroundTint="@color/appGreen"
+        app:maxImageSize="25dp"
+        app:fabCustomSize="60dp"
+        tools:visibility="gone"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEndCall_activity_voice_call"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="@id/guide_vertical_4"
+        app:layout_constraintEnd_toEndOf="@id/guide_vertical_4"
+        app:layout_constraintBottom_toTopOf="@id/guide_horizontal_2"
+        android:src="@drawable/ic_call_end"
+        android:tint="@color/white"
+        android:backgroundTint="@color/appRed"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        app:maxImageSize="25dp"
+        app:fabCustomSize="60dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLoudSpeaker_activity_voice_call"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="@id/guide_vertical_5"
+        app:layout_constraintEnd_toEndOf="@id/guide_vertical_5"
+        app:layout_constraintBottom_toTopOf="@id/guide_horizontal_2"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:src="@drawable/ic_speaker"
+        android:tint="@color/white"
+        android:backgroundTint="@android:color/transparent"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        app:maxImageSize="25dp"
+        app:fabCustomSize="60dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSwitchToVideoCall_activity_voice_call"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toEndOf="@id/fabLoudSpeaker_activity_voice_call"
+        app:layout_constraintEnd_toStartOf="@id/fabMuteMic_activity_voice_call"
+        app:layout_constraintBottom_toTopOf="@id/guide_horizontal_2"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:src="@drawable/ic_videocall"
+        android:tint="@color/white"
+        android:backgroundTint="@android:color/transparent"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        app:maxImageSize="25dp"
+        app:fabCustomSize="60dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMuteMic_activity_voice_call"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toEndOf="@id/fabSwitchToVideoCall_activity_voice_call"
+        app:layout_constraintEnd_toStartOf="@id/fabEndCall_activity_voice_call"
+        app:layout_constraintBottom_toTopOf="@id/guide_horizontal_2"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:src="@drawable/ic_mic_off"
+        android:tint="@color/white"
+        android:backgroundTint="@android:color/transparent"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        app:maxImageSize="25dp"
+        app:fabCustomSize="60dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_horizontal_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_horizontal_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".9"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_vertical_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_vertical_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".80"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_vertical_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".2"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

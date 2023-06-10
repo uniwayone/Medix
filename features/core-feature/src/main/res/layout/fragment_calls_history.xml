@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+    android:id="@+id/rootView"
+    tools:context="app.slyworks.core_feature.calls_history.CallsHistoryFragment">
+
+    <include
+        android:id="@+id/progress_layout"
+        layout="@layout/layout_progressbar"
+        android:layout_height="60dp"
+        android:layout_width="60dp"
+        android:layout_gravity="center"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCalls_calls_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/li_call_history"
+        android:visibility="gone"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/errorLayout_frag_calls_history">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/ivError_frag_calls_history"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/error"/>
+
+        <TextView
+            android:id="@+id/tvError_frag_calls_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivError_frag_calls_history"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            tools:text="You have no calls. Click the 'call' icon to get started"
+            android:textSize="18sp"
+            android:gravity="center"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_start_new_call"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="bottom|end"
+        app:backgroundTint="@color/appGreen"
+        android:src="@drawable/ic_start_call"
+        app:rippleColor="#388E3C"
+        app:elevation="4dp"
+        app:tint="@color/white"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

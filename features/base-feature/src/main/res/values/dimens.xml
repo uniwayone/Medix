@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="et_corner_radius">0dp</dimen>
+    <dimen name="btn_corner_radius">6dp</dimen>
+    <dimen name="layout_size_margin">8dp</dimen>
+    <dimen name="layout_size_margin2">32dp</dimen>
+    <dimen name="layout_size_margin5">32dp</dimen>
+    <dimen name="layout_size_margin3">32dp</dimen>
+    <dimen name="layout_size_margin4">16dp</dimen>
+    <dimen name="layout_size_margin6">16dp</dimen>
+    <dimen name="layout_size_margin7">8dp</dimen>
+    <dimen name="ext_fab_radius">4dp</dimen>
+    <dimen name="li_message_radius">8dp</dimen>
+    <dimen name="grid_layout_spacing">16dp</dimen>
+    <dimen name="btn_video_invite_radius">4dp</dimen>
+    <dimen name="itemView_height">20dp</dimen>
+    <dimen name="iv_li_message_height">16dp</dimen>
+    <dimen name="iv_li_message_width">16dp</dimen>
+
+    <dimen name="btn_radius">24dp</dimen>
+    <dimen name="button_radius">24dp</dimen>
+    <dimen name="et_corner_radius2">4dp</dimen>
+    <dimen name="divider_top_margin">8dp</dimen>
+</resources>

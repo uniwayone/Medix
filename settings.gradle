@@ -1,0 +1,43 @@
+dependencyResolutionManagement {
+    //repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+
+        maven{
+            url 'https://jitpack.io'
+        }
+    }
+}
+rootProject.name = "Medix"
+include ':app'
+include ':libraries:utils-lib'
+include ':libraries:firebase-commons-lib'
+include ':libraries:network-lib'
+include ':libraries:auth-lib'
+include ':libraries:fcm-api-lib'
+include ':libraries:communication-lib'
+include ':libraries:controller-lib'
+include ':libraries:constants-lib'
+include ':libraries:di-base-lib'
+include ':libraries:room-lib'
+include ':libraries:models-commons-lib'
+include ':libraries:userdetails-lib'
+include ':libraries:crypto-lib'
+include ':features:auth-feature'
+include ':features:video-call-feature'
+include ':features:voice-call-feature'
+include ':features:core-feature'
+include ':features:base-feature'
+include ':features:message-feature'
+include ':libraries:location-lib'
+include ':features:requests-feature'
+include ':features:navigation-feature'
+include ':libraries:data-lib'
+include ':libraries:payment-lib'
+include ':features:call-commons-feature'

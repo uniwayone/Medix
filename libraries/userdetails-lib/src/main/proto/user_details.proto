@@ -1,0 +1,21 @@
+syntax = "proto3";
+import "google/protobuf/wrappers.proto";
+
+option java_package = "app.slyworks.userdetails_lib";
+option java_multiple_files = true;
+
+message UserDetails{
+     string accountType = 1;
+     string firstName = 2;
+     string lastName = 3;
+     string fullName = 4;
+     string email = 5;
+     string sex = 6;
+     string age = 7;
+     string firebaseUID = 8;
+     string agoraUID = 9;
+     string FBRegistrationToken = 10;
+     string imageUri = 11;
+     repeated string history = 12;
+     repeated string specialization = 13;
+}

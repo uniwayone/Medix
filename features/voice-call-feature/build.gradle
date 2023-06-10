@@ -1,0 +1,60 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+apply from: "${rootProject.projectDir}/dependencies.gradle"
+
+android {
+    compileSdk sdk_details.compileSDK
+
+    defaultConfig {
+
+        minSdk sdk_details.minSDK
+        targetSdk sdk_details.targetSDK
+        versionCode sdk_details.versionCode
+        versionName sdk_details.versionName
+
+        testInstrumentationRunner appTestRunners.default
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled sdk_details.minifyEnabled
+            shrinkResources sdk_details.shrinkResources
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled sdk_details.minifyEnabled
+            shrinkResources sdk_details.shrinkResources
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+        freeCompilerArgs = ['-Xjvm-default=compatibility']
+    }
+
+    viewBinding{
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation project(path: ':features:call-commons-feature')
+    implementation project(path: ':libraries:communication-lib')
+
+    implementation impl_depends.coroutines_android
+    implementation impl_depends.camera
+    implementation impl_depends.camera_lifecycle
+    implementation impl_depends.camera_view
+    implementation impl_depends.circle_imageview
+
+    kapt kapt_depends.dagger_kapt
+}

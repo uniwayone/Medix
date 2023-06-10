@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="1.8">
+      <module name="Medix.app" target="11" />
+      <module name="Medix.auth" target="11" />
+      <module name="Medix.communication" target="11" />
+      <module name="Medix.constants" target="1.8" />
+      <module name="Medix.controller" target="11" />
+      <module name="Medix.di" target="11" />
+      <module name="Medix.fcm_api" target="11" />
+      <module name="Medix.features.auth-feature" target="11" />
+      <module name="Medix.features.base-feature" target="11" />
+      <module name="Medix.features.call-commons-feature" target="11" />
+      <module name="Medix.features.core-feature" target="11" />
+      <module name="Medix.features.message-feature" target="11" />
+      <module name="Medix.features.navigation-feature" target="11" />
+      <module name="Medix.features.requests-feature" target="11" />
+      <module name="Medix.features.ui-commons-feature" target="11" />
+      <module name="Medix.features.video-call-feature" target="11" />
+      <module name="Medix.features.voice-call-feature" target="11" />
+      <module name="Medix.firebase_commons" target="11" />
+      <module name="Medix.libraries.auth-lib" target="11" />
+      <module name="Medix.libraries.communication-lib" target="11" />
+      <module name="Medix.libraries.controller" target="11" />
+      <module name="Medix.libraries.controller-lib" target="11" />
+      <module name="Medix.libraries.core-lib" target="11" />
+      <module name="Medix.libraries.crypto-lib" target="11" />
+      <module name="Medix.libraries.data-lib" target="11" />
+      <module name="Medix.libraries.di-base-lib" target="11" />
+      <module name="Medix.libraries.fcm-api-lib" target="11" />
+      <module name="Medix.libraries.firebase-commons-lib" target="11" />
+      <module name="Medix.libraries.location-lib" target="11" />
+      <module name="Medix.libraries.models-commons-lib" target="11" />
+      <module name="Medix.libraries.network-lib" target="11" />
+      <module name="Medix.libraries.payment-lib" target="11" />
+      <module name="Medix.libraries.room-lib" target="11" />
+      <module name="Medix.libraries.userdetails-lib" target="11" />
+      <module name="Medix.libraries.utils-lib" target="11" />
+      <module name="Medix.location" target="11" />
+      <module name="Medix.models" target="11" />
+      <module name="Medix.navigation" target="11" />
+      <module name="Medix.network" target="11" />
+      <module name="Medix.payment" target="11" />
+      <module name="Medix.room" target="11" />
+      <module name="Medix.room_models" target="11" />
+      <module name="Medix.security" target="11" />
+      <module name="Medix.userdetails" target="11" />
+      <module name="Medix.utils" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

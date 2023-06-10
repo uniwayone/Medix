@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Medix</string>
+
+    <string name="SERVER_KEY" translatable="false">AAAAPeTGy6o:APA91bFIBuqcGzF4lNM-3ns9qQx5bU2h8f3ksSkfFTZd57Uq79csYzUNEMzwbfPLR0MYiIFfUXXHSyzD41QLsbDgShUzubk-jVoWvCi-fdjMiNTef-61VoWGeQbGfyJCIDnE7vhYPKuj</string>
+
+    <string name="notification_channel_1_id" translatable="false">app.slyworks.medix.CHANNEL_ONE_ID</string>
+    <string name="notification_channel_1_name">Cloud Messages Channel</string>
+    <string name="notification_channel_1_description">serves for important app notifications like Firebase Cloud Messages</string>
+
+    <string name="notification_channel_2_id" translatable="false">app.slyworks.medix.CHANNEL_TWO_ID</string>
+    <string name="notification_channel_2_name">General App Notifications Channel</string>
+    <string name="notification_channel_2_description">serves for routine all other notifications</string>
+
+
+
+    <string name="login_bottom_counter"><b>1</b> of <b>4</b></string>
+    <string name="signup_text">Not a user? <u>Register here</u></string>
+    <string name="having_difficulty_logging_in"><a>Having difficulty logging in?</a></string>
+    <string name="forgot_password"><u>forgot password?</u></string>
+    <string name="login_message">In the aftermath of the coronavirus pandemic, one thing has become evidently clear: we cannot keep doing things the same way. Our aim is to provide a platform for connecting individuals with healthcare. Our users are qualified doctors who are interested in helping others as much as they possibly can without the need for a formal hospital consultation meeting. And patients with health challenges. Please indicate how you would want to use the platform below</string>
+
+    <string name="view_tc"><u>View Terms and Conditions</u></string>
+    <string name="terms_and_conditions">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores repellendus asperiores alias ullam atque quibusdam laborum ut consectetur ab. Voluptatem dignissimos doloribus quod assumenda vitae vel quaerat, consequatur, soluta dolore sequi minus animi repellat cupiditate numquam quae fugit dolores praesentium autem unde rerum quis. Dicta perspiciatis repellendus nisi accusantium dolore! Quaerat distinctio ducimus, minima quas molestiae eos doloremque sed velit inventore ea ad quam autem, consequatur laboriosam. Atque quisquam recusandae iste blanditiis assumenda. Animi eius labore distinctio iure magni aut ullam quidem enim asperiores excepturi, dolorem, natus voluptatem quo error. Ducimus culpa, dicta totam voluptate, soluta illo tempora quam reiciendis iusto repellendus commodi, consectetur a alias vel non! Explicabo unde culpa maiores voluptates corrupti voluptatum aliquam aut obcaecati, ipsa numquam sunt ullam doloremque, laboriosam quas ad incidunt? Excepturi dolorum beatae accusamus repellendus velit ullam soluta dolorem at ipsum earum accusantium, maiores, impedit suscipit consectetur eos officiis ratione. Cumque, ex. Voluptates quam nihil, ipsa corrupti similique nesciunt voluptatibus libero quos quidem nemo sint porro, odio, quisquam voluptatem illo? Omnis molestias officiis dolor non, ratione nulla! Libero cumque, dolorum aliquam ratione</string>
+
+    <string name="menu_main_action_settings">Settings</string>
+    <string name="menu_main_action_contact_support">Contact Support</string>
+    <string name="menu_main_action_about_developer">About Developer</string>
+
+    <string name="stream_with">stream with <b>Dr. Joshua</b></string>
+    <string name="action_home_text">Home</string>
+    <string name="action_chats_text">Chats</string>
+    <string name="action_connect_text">Connect</string>
+
+    <string name="specialization_holder">Specialization: %1$s</string>
+    <string name="user_uid">" "</string>
+    <string name="consultation_doctor">Dr. %1$s</string>
+    <string name="register_here"><u>register here</u></string>
+    <string name="verify_text"><u>verify your account</u></string>
+
+    <string name="appservice_description_text">This is a Service important for the proper functioning of the GADS_2021 app</string>
+
+    <string name="tvdetails_text_placeholder"><b>%1$s</b> would like a Video Call with you</string>
+    <string name="new_message_received">New Message Received</string>
+    <string name="new_message_text">You have new messages.Tap to view</string>
+    <string name="menu_main_action_login">logout</string>
+    <string name="menu_main_action_calls_history">Calls History</string>
+    <string name="menu_main_action_requests">Requests</string>
+    <string name="li_calls_history">%1$s, %2$s</string>
+    <string name="reg_patient_intro">We aim to provide the best virtual medical consultation possible, providing us with information about your medical history would help in speeding up the consultation process. Your information is private and is only shared with doctors when you allow it.</string>
+    <string name="reg_header">Please check any of the boxes that apply to you, or add a different health condition by clicking the \"add\" button.</string>
+    <string name="reg_header_doctor">Please enter your area(s) of specialization by clicking the \"add\" button.</string>
+    <string name="resend_otp_text"><u>Resend OTP</u></string>
+
+    <string name="continue_text"><u>continue</u></string>
+</resources>

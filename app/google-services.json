@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "163035604631",
+    "firebase_url": "https://medix-4bfdc-default-rtdb.firebaseio.com",
+    "project_id": "medix-4bfdc",
+    "storage_bucket": "medix-4bfdc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163035604631:android:2204848251d418132b2bd2",
+        "android_client_info": {
+          "package_name": "app.slyworks.medix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "163035604631-sva25h6oealsmutb7og4m8vpinf8ss12.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.slyworks.medix",
+            "certificate_hash": "f108695ec25fc79fcb9a35c25d878318fd35832b"
+          }
+        },
+        {
+          "client_id": "163035604631-j4hdhtiqtgklf4sklovabili72dlkeih.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyy-GYOn-Ef5XkuFGNXGU0Fkiz7uHqtJk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "163035604631-j4hdhtiqtgklf4sklovabili72dlkeih.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

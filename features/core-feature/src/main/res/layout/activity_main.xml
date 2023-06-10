@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    android:id="@+id/drawer_main"
+    tools:context="app.slyworks.core_feature.main.MainActivity">
+
+<include
+ android:id="@+id/main_layout"
+ layout="@layout/app_bar_main"
+ android:layout_height="match_parent"
+ android:layout_width="match_parent" />
+
+ <app.slyworks.base_feature.custom_views.ProgressOverlayView
+     android:id="@+id/progress"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:visibility="gone" />
+
+ <com.google.android.material.navigation.NavigationView
+     android:id="@+id/nav_view_main"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_gravity="start"
+     app:itemHorizontalPadding="40dp"
+     app:itemBackground="@drawable/menu_item_padding"
+     app:headerLayout="@layout/nav_header_main"
+     app:menu="@menu/menu_main"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

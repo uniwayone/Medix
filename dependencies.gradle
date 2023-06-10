@@ -1,0 +1,186 @@
+    ext.sdk_details = [:]
+
+    ext.impl_depends = [:]
+    ext.kapt_depends = [:]
+    ext.test_depends = [:]
+    ext.debug_impl_depends= [:]
+
+
+    def sdk_details = [:]
+    def impl_depends = [:]
+    def kapt_depends = [:]
+    def test_depends = [:]
+    def debug_impl_depends= [:]
+    def appTestRunners = [:]
+
+    sdk_details.applicationID = "app.slyworks.medix"
+    sdk_details.minSDK = 21
+    sdk_details.compileSDK = 32
+    sdk_details.targetSDK = 32
+    sdk_details.versionCode = 1
+    sdk_details.versionName = "1.0.0"
+    sdk_details.minifyEnabled = false
+    sdk_details.shrinkResources = false
+
+    appTestRunners.default = "androidx.test.runner.AndroidJUnitRunner"
+    ext.defaultTestInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+    impl_depends.javax = "javax.inject:javax.inject:1"
+    impl_depends.appcompat = "androidx.appcompat:appcompat:1.4.1"
+    impl_depends.material = "com.google.android.material:material:1.6.1"
+    impl_depends.recyclerview = "androidx.recyclerview:recyclerview:1.2.1"
+    impl_depends.constraint_layout = "androidx.constraintlayout:constraintlayout:2.1.3"
+    impl_depends.cardview = "androidx.cardview:cardview:1.0.0"
+    impl_depends.drawerlayout = "androidx.drawerlayout:drawerlayout:1.1.1"
+    impl_depends.spinkit = "com.github.ybq:Android-SpinKit:1.4.0"
+    impl_depends.asynclayoutinflater =  "androidx.asynclayoutinflater:asynclayoutinflater:1.0.0"
+
+    impl_depends.legacy_support = "androidx.legacy:legacy-support-v4:1.0.0"
+
+    impl_depends.core_ktx = "androidx.core:core-ktx:1.7.0"
+
+    impl_depends.lifecycle_extensions = "android.arch.lifecycle:extensions:1.1.1"
+
+    def lifecycle = "2.4.0"
+    impl_depends.lifecycle_viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle"
+    impl_depends.lifecycle_livedata = "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle"
+    impl_depends.lifecycle_runtime = "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle"
+    impl_depends.lifecycle_reactive_streams = "androidx.lifecycle:lifecycle-reactivestreams-ktx:$lifecycle"
+
+    impl_depends.work_runtime = "androidx.work:work-runtime-ktx:2.7.1"
+
+    impl_depends.multidex = "androidx.multidex:multidex:2.0.1"
+
+    impl_depends.activity_ktx = "androidx.activity:activity-ktx:1.4.0"
+
+    impl_depends.preference_ktx =  "androidx.preference:preference-ktx:1.2.0"
+    impl_depends.security_crypto = "androidx.security:security-crypto:1.0.0"
+
+    def datastore = "1.0.0"
+    impl_depends.datastore = "androidx.datastore:datastore:$datastore"
+    impl_depends.datastore_preferences = "androidx.datastore:datastore-preferences:$datastore"
+
+    impl_depends.protoc = "com.google.protobuf:protoc:3.11.0"
+
+    impl_depends.protobuf_javalite = "com.google.protobuf:protobuf-javalite:3.14.0"
+
+    def camera = "1.1.0-beta03"
+    impl_depends.camera = "androidx.camera:camera-camera2:$camera"
+    impl_depends.camera_lifecycle = "androidx.camera:camera-lifecycle:$camera"
+    impl_depends.camera_video = "androidx.camera:camera-video:$camera"
+    impl_depends.camera_view = "androidx.camera:camera-view:$camera"
+    impl_depends.camera_extensions = "androidx.camera:camera-extensions:$camera"
+
+    def room = "2.4.0"
+    impl_depends.room = "androidx.room:room-ktx:$room"
+    impl_depends.room_runtime = "androidx.room:room-runtime:$room"
+    impl_depends.room_rxjava = "androidx.room:room-rxjava3:$room"
+    kapt_depends.room_kapt = "androidx.room:room-compiler:$room"
+
+    test_depends.mock_webserver = "com.squareup.okhttp3:mockwebserver:3.12.0"
+    test_depends.core_testing = "androidx.arch.core:core-testing:2.1.0"
+    test_depends.junit = "junit:junit:4.13.2"
+    test_depends.robolectric = "org.robolectric:robolectric:4.9"
+
+    def android_junit = "1.1.2"
+    test_depends.android_junit = "androidx.test.ext:junit:$android_junit"
+    test_depends.android_junit_ktx = "androidx.test.ext:junit-ktx:$android_junit"
+    /* ensure its debugImplementation */
+    test_depends.fragment = "androidx.fragment:fragment:1.5.5"
+    test_depends.fragment_testing = "androidx.fragment:fragment-testing:1.5.5"
+    test_depends.android_runner = "androidx.test:runner:1.3.0"
+    test_depends.android_accessibility = "com.google.android.apps.common.testing.accessibility.framework:accessibility-test-framework:3.1"
+    test_depends.jupiter = "org.junit.jupiter:junit-jupiter-engine:5.7.1"
+
+    def espresso = "3.5.0"
+    test_depends.espresso = "androidx.test.espresso:espresso-core:$espresso"
+    test_depends.espresso_core =  "androidx.test.espresso:espresso-core:$espresso"
+    test_depends.espresso_contrib = "androidx.test.espresso:espresso-contrib:$espresso"
+    test_depends.espresso_intents = "androidx.test.espresso:espresso-intents:$espresso"
+    test_depends.espresso_idling_resource = "androidx.test.espresso:espresso-idling-resource:$espresso"
+    test_depends.espresso_web = "androidx.test.espresso:espresso-web:$espresso"
+    test_depends.espresso_accessibility = "androidx.test.espresso:espresso-accessibility:$espresso"
+
+    test_depends.mockito_kotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
+    test_depends.mockito = "org.mockito.kotlin:mockito-kotlin:3.2.0"
+    test_depends.mockito_android = "org.mockito:mockito-android:3.10.0"
+
+    test_depends.truth = "androidx.test.ext:truth:1.4.0"
+    
+    test_depends.coroutines_testing = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4"
+
+    /* for mocking final class, instead of mockito-maker-inline process */
+    test_depends.dexmaker = "com.linkedin.dexmaker:dexmaker-mockito-inline:2.28.1"
+
+    test_depends.condition_watcher = "com.azimolabs.conditionwatcher:conditionwatcher:0.2"
+
+    test_depends.uiautomator = "androidx.test.uiautomator:uiautomator:2.2.0"
+
+    impl_depends.coroutines_android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+    impl_depends.coroutines_play_services = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1"
+
+    def firebase = "29.0.1"
+    impl_depends.firebase_bom = "com.google.firebase:firebase-bom:$firebase"
+    impl_depends.firebase_analytics = "com.google.firebase:firebase-analytics-ktx"
+    impl_depends.firebase_auth = "com.google.firebase:firebase-auth-ktx"
+    impl_depends.firebase_database = "com.google.firebase:firebase-database-ktx"
+    impl_depends.firebase_storage = "com.google.firebase:firebase-storage-ktx"
+    impl_depends.firebase_crashlytics = "com.google.firebase:firebase-crashlytics-ktx"
+    impl_depends.firebase_messaging = "com.google.firebase:firebase-messaging-ktx"
+    impl_depends.firebase_firestore = "com.google.firebase:firebase-firestore-ktx"
+
+    impl_depends.glide = "com.github.bumptech.glide:glide:4.13.0"
+
+    impl_depends.circle_imageview = "de.hdodenhof:circleimageview:3.1.0"
+
+    impl_depends.rxjava = "io.reactivex.rxjava3:rxjava:3.1.3"
+
+    impl_depends.rxandroid = "io.reactivex.rxjava3:rxandroid:3.0.0"
+
+    def rxbinding = "4.0.0"
+    impl_depends.rxbinding = "com.jakewharton.rxbinding4:rxbinding:$rxbinding"
+    impl_depends.rxbinding_material = "com.jakewharton.rxbinding4:rxbinding-material:$rxbinding"
+    impl_depends.rxbinding_core = "com.jakewharton.rxbinding4:rxbinding-core:$rxbinding"
+    impl_depends.rxbinding_appcompat = "com.jakewharton.rxbinding4:rxbinding-appcompat:$rxbinding"
+
+    impl_depends.agora_sdk = "com.github.agorabuilder:native-full-sdk:3.4.1"
+    impl_depends.agora_new_sdk = "io.agora.rtc:full-sdk:4.0.1"
+
+    impl_depends.lottie = "com.airbnb.android:lottie:5.0.3"
+
+    impl_depends.easyadapter = "ru.surfstudio.android:easyadapter:2.0.0"
+
+    def dagger = "2.42"
+    impl_depends.dagger = "com.google.dagger:dagger:$dagger"
+    kapt_depends.dagger_kapt = "com.google.dagger:dagger-compiler:$dagger"
+
+    def retrofit = "2.9.0"
+    impl_depends.retrofit = "com.squareup.retrofit2:retrofit:$retrofit"
+    impl_depends.retrofit_gson = "com.squareup.retrofit2:converter-gson:$retrofit"
+
+    impl_depends.logging_interceptor = "com.squareup.okhttp3:logging-interceptor:4.9.1"
+
+    impl_depends.gson = "com.google.code.gson:gson:2.9.1"
+
+    def stetho = "1.5.1"
+    impl_depends.stetho = "com.facebook.stetho:stetho:$stetho"
+    impl_depends.stetho_okhttp = "com.facebook.stetho:stetho-okhttp3:$stetho"
+
+    impl_depends.timber = "com.jakewharton.timber:timber:5.0.1"
+
+    def arrow = "1.0.1"
+    impl_depends.arrow_core = "io.arrow-kt:arrow-core:$arrow"
+    impl_depends.arrow_core_optics = "io.arrow-kt:arrow-optics:$arrow"
+    impl_depends.arrow_fx = "io.arrow-kt:arrow-fx-coroutines:$arrow"
+    kapt_depends.arrow_kapt = "io.arrow-kt:arrow-meta:$arrow"
+
+    impl_depends.navigator = "app.slyworks.navigator:navigator:1.0.0-alpha"
+
+    debug_impl_depends.leakcanary = "com.squareup.leakcanary:leakcanary-android:2.8.1"
+
+    ext.sdk_details = sdk_details
+    ext.impl_depends = impl_depends
+    ext.kapt_depends = kapt_depends
+    ext.test_depends = test_depends
+    ext.debug_impl_depends = debug_impl_depends
+    ext.appTestRunners = appTestRunners

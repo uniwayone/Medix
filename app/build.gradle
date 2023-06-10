@@ -1,0 +1,142 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
+
+apply from: "${rootProject.projectDir}/dependencies.gradle"
+
+android {
+    compileSdk sdk_details.compileSDK
+
+    defaultConfig {
+        applicationId sdk_details.applicationID
+        minSdk sdk_details.minSDK
+        targetSdk sdk_details.targetSDK
+        versionCode sdk_details.versionCode
+        versionName sdk_details.versionName
+
+        testInstrumentationRunner appTestRunners.default
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled sdk_details.minifyEnabled
+            shrinkResources sdk_details.shrinkResources
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled sdk_details.minifyEnabled
+            shrinkResources sdk_details.shrinkResources
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+        freeCompilerArgs = ['-Xjvm-default=compatibility']
+    }
+
+    viewBinding{
+        enabled = true
+    }
+
+    packagingOptions {
+        exclude 'assets/app.slyworks.medix.data.room.AppDatabase/1.json'
+        exclude "${rootProject.projectDir}/libraries/room-lib/src/main/assets/app.slyworks.room_lib.AppDatabase/*"
+        exclude "${rootProject.projectDir}/pictures"
+    }
+
+    sourceSets {
+        /* you might need to declare your test dependencies
+        * twice as both androidTestImplementation and testImplementation
+        * and you could either run from the command line
+        * >> ./gradle test (for both test and sharedTest)
+        * >> ./gradle connectedAndroidTest (for androidTest and sharedTest)
+        * second is to create a 'run config' for it */
+
+        /* also disable these in Developer Options
+        * Window animation scale
+          Transition animation scale
+          Animator duration scale */
+
+        String sharedTestDir = 'src/sharedTest/java'
+        test {
+            java.srcDir sharedTestDir
+        }
+        androidTest {
+            java.srcDir sharedTestDir
+        }
+    }
+
+}
+
+dependencies {
+    implementation project(path: ':features:auth-feature')
+    implementation project(path: ':features:core-feature')
+    implementation project(path: ':features:message-feature')
+    implementation project(path: ':features:requests-feature')
+    implementation project(path: ':features:video-call-feature')
+    implementation project(path: ':features:voice-call-feature')
+    implementation project(path: ':features:navigation-feature')
+    implementation project(path: ':libraries:auth-lib')
+    implementation project(path: ':libraries:data-lib')
+    implementation project(path: ':libraries:utils-lib')
+    implementation project(path: ':libraries:constants-lib')
+    implementation project(path: ':libraries:di-base-lib')
+
+    implementation impl_depends.core_ktx
+    implementation impl_depends.appcompat
+    implementation impl_depends.material
+    implementation impl_depends.rxjava
+    implementation impl_depends.rxandroid
+    implementation impl_depends.timber
+
+    implementation impl_depends.dagger
+    kapt kapt_depends.dagger_kapt
+
+    testImplementation test_depends.core_testing
+    testImplementation test_depends.junit
+    testImplementation test_depends.mockito_kotlin
+    testImplementation test_depends.robolectric
+    testImplementation test_depends.android_junit
+    testImplementation test_depends.espresso
+    testImplementation impl_depends.core_ktx
+}
+
+/*task runOutcomeUnitTests(){
+    doLast{
+       exec {
+           executable = 'gradle'
+           args = [':app:testDebugUnitTest', '--tests', '\"com.slyworks.medix.OutcomeUnitTest\"']
+       }
+    }
+}*/
+
+/*def taskName = "uninstallOldVersionFirst"
+android.applicationVariants.all { variant ->
+    if (variant.name == "debug") {
+        tasks.create(name: taskName) {
+            def packageName = variant.applicationId
+            doLast {
+                exec {
+                    executable = 'adb'
+                    args = ['uninstall', packageName]
+                }
+            }
+        }
+    }
+}
+
+
+tasks.whenTaskAdded({
+    if(it.name == "installDebug"){
+        it.dependsOn taskName
+    }
+})*/

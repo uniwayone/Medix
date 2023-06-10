@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="16dp"
+    android:paddingHorizontal="8dp"
+    android:background="@drawable/siv_background_default">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/siv_rb"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/siv_title"
+            app:layout_constraintBottom_toBottomOf="@id/siv_title"
+            android:buttonTint="@color/appBlue"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/siv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/siv_rb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/chivo_regular"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/appBlue"
+            tools:text="Verify Via OTP"/>
+
+        <TextView
+            android:id="@+id/siv_sub_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/siv_title"
+            app:layout_constraintEnd_toEndOf="@id/siv_title"
+            app:layout_constraintTop_toBottomOf="@id/siv_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp"
+            android:gravity="start"
+            android:fontFamily="@font/chivo_regular"
+            android:lineSpacingMultiplier="1.1"
+            android:textSize="16sp"
+            android:textColor="@color/appBlue2"
+            tools:text="Verify your account by entering a One Time Password (OTP) that would be sent to the phone number entered during registration"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

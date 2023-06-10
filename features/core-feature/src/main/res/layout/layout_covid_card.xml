@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:cardBackgroundColor="@color/appGrey"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toEndOf="@id/_guide_vertical_1"
+                app:layout_constraintEnd_toStartOf="@id/_guide_vertical_3"
+                app:layout_constraintTop_toBottomOf="@id/_guide_horizontal_1"
+                app:layout_constraintBottom_toTopOf="@id/_guide_horizontal_2"
+                android:src="@drawable/ic_diagnose"
+                app:tint="@color/appTextColor3"/>
+
+            <TextView
+                android:id="@+id/tvTitle_card_covid_frag_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/_guide_vertical_4"
+                app:layout_constraintEnd_toStartOf="@id/_guide_vertical_5"
+                app:layout_constraintTop_toBottomOf="@id/_guide_horizontal_1"
+                android:text="Self Check for Covid-19"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/appTextColor3"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/tvText_card_covid_frag_home"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toEndOf="@id/_guide_vertical_4"
+                app:layout_constraintEnd_toStartOf="@id/_guide_vertical_5"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle_card_covid_frag_home"
+                app:layout_constraintBottom_toTopOf="@id/_guide_horizontal_2"
+                android:layout_marginTop="8dp"
+                android:text="Quickly get an informal diagnosis if the symptoms you are suffering are covid-related"
+                android:textSize="16sp"
+                android:textColor="@color/appTextColor3"
+                android:gravity="start"
+                android:ellipsize="end"/>
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toEndOf="@id/_guide_vertical_5"
+                app:layout_constraintEnd_toStartOf="@id/_guide_vertical_2"
+                app:layout_constraintTop_toBottomOf="@id/_guide_horizontal_1"
+                app:layout_constraintBottom_toTopOf="@id/_guide_horizontal_2"
+                android:src="@drawable/ic_arrow_forward"
+                app:tint="@color/appTextColor3" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/_guide_horizontal_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".04"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/_guide_horizontal_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".96"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/_guide_vertical_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".02"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/_guide_vertical_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".98"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/_guide_vertical_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".3"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/_guide_vertical_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".32"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/_guide_vertical_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".9"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>

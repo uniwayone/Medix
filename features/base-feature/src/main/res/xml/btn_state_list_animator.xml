@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--pressed state decrease size to 80% -->
+    <item
+        android:state_pressed="true">
+
+        <set>
+            <objectAnimator
+                android:propertyName="scaleX"
+                android:duration="@android:integer/config_shortAnimTime"
+                android:valueTo="0.9"
+                android:valueType="floatType"/>
+
+            <objectAnimator
+                android:propertyName="scaleY"
+                android:duration="@android:integer/config_shortAnimTime"
+                android:valueTo="0.9"
+                android:valueType="floatType"/>
+        </set>
+    </item>
+
+    <!--default state revert size to 100% -->
+    <item
+        android:state_pressed="false">
+
+        <set>
+            <objectAnimator
+                android:propertyName="scaleX"
+                android:duration="@android:integer/config_shortAnimTime"
+                android:valueTo="1"
+                android:valueType="floatType"/>
+
+            <objectAnimator
+                android:propertyName="scaleY"
+                android:duration="@android:integer/config_shortAnimTime"
+                android:valueTo="1"
+                android:valueType="floatType"/>
+        </set>
+    </item>
+</selector>

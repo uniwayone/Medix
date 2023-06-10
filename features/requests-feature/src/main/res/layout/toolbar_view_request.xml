@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="313dp"
+    android:fitsSystemWindows="true"
+    android:id="@+id/appBarLayout_view_request">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:contentScrim="@color/appGrey"
+        app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_collapseMode="parallax"
+            app:layout_collapseParallaxMultiplier="0.5">
+
+            <ImageView
+                android:id="@+id/ivBack_view_request2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_back_arrow"
+                android:background="@drawable/back_btn_bg"
+                app:tint="@color/appTextColor3"
+                android:elevation="4dp"
+                android:layout_margin="8dp"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/ivProfile_view_request"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="28dp"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabToggleFabsStatus_view_request"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivProfile_view_request"
+                app:layout_constraintBottom_toBottomOf="@id/ivProfile_view_request"
+                app:layout_constraintStart_toEndOf="@id/fabMessage_view_request"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                android:backgroundTint="@color/appPink"
+                android:enabled="true"
+                android:src="@drawable/ic_add"
+                app:fabCustomSize="56dp"
+                app:maxImageSize="20dp"
+                app:tint="@color/appTextColor3"
+                app:elevation="4dp"
+                app:rippleColor="#8E24AA" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabMessage_view_request"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:backgroundTint="@color/appPink"
+                android:enabled="true"
+                android:src="@drawable/ic_message"
+                android:visibility="gone"
+                app:tint="@color/appTextColor3"
+                app:elevation="4dp"
+                app:rippleColor="#8E24AA"
+                app:fabCustomSize="45dp"
+                app:maxImageSize="20dp"
+                app:layout_constraintBottom_toBottomOf="@id/ivProfile_view_request"
+                app:layout_constraintStart_toEndOf="@id/fabVoiceCall_view_request"
+                app:layout_constraintEnd_toStartOf="@id/fabToggleFabsStatus_view_request"
+                app:layout_constraintTop_toBottomOf="@id/ivProfile_view_request"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabVoiceCall_view_request"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:backgroundTint="@color/appPink"
+                android:enabled="true"
+                android:src="@drawable/ic_voice_call"
+                android:visibility="gone"
+                app:tint="@color/appTextColor3"
+                app:elevation="4dp"
+                app:rippleColor="#8E24AA"
+                app:fabCustomSize="45dp"
+                app:maxImageSize="20dp"
+                app:layout_constraintBottom_toBottomOf="@id/ivProfile_view_request"
+                app:layout_constraintStart_toEndOf="@id/fabVideoCall_view_request"
+                app:layout_constraintEnd_toStartOf="@id/fabMessage_view_request"
+                app:layout_constraintTop_toBottomOf="@id/ivProfile_view_request" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabVideoCall_view_request"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:backgroundTint="@color/appPink"
+                android:enabled="true"
+                android:src="@drawable/ic_videocall"
+                app:tint="@color/appTextColor3"
+                app:elevation="4dp"
+                app:rippleColor="#8E24AA"
+                app:fabCustomSize="45dp"
+                app:maxImageSize="20dp"
+                app:layout_constraintBottom_toBottomOf="@id/ivProfile_view_request"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/fabVoiceCall_view_request"
+                app:layout_constraintTop_toBottomOf="@id/ivProfile_view_request"
+                android:visibility="gone" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group_1_view_request"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="fabMessage_view_request,fabVoiceCall_view_request,fabVideoCall_view_request"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:contentInsetStart="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivBack_view_request"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/ic_back_arrow"
+                    app:tint="@color/appTextColor3"
+                    android:elevation="4dp"
+                    android:layout_margin="8dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tvProfile_small_view_request"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintStart_toEndOf="@id/guide_vertical_6"
+                    app:layout_constraintEnd_toStartOf="@id/guide_vertical_7"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginStart="37dp"
+                    tools:text="Dr. Joshua Sylvanus"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textSize="20sp"
+                    android:textColor="@color/appTextColor3"
+                    android:gravity="center_vertical"
+                    tools:visibility="gone"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivProfile_small_view_request"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintStart_toEndOf="@id/guide_vertical_4"
+                    app:layout_constraintEnd_toStartOf="@id/guide_vertical_5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"/>
+
+                <ProgressBar
+                    android:id="@+id/progress"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintStart_toEndOf="@id/guide_vertical_4"
+                    app:layout_constraintEnd_toStartOf="@id/guide_vertical_5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:progressTint="@color/appTextColor3"
+                    android:visibility="gone" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_vertical_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".82"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_vertical_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".98"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_vertical_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".02"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_vertical_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".80"/>
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/group_2_view_request"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="tvProfile_small_view_request,ivProfile_small_view_request,ivBack_view_request"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+</com.google.android.material.appbar.AppBarLayout>

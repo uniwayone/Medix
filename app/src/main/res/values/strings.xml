@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notification_channel_1_id" translatable="false">app.slyworks.medix.CHANNEL_ONE_ID</string>
+    <string name="notification_channel_1_name">Cloud Messages Channel</string>
+    <string name="notification_channel_1_description">serves for important app notifications like Firebase Cloud Messages</string>
+
+    <string name="notification_channel_2_id" translatable="false">app.slyworks.medix.CHANNEL_TWO_ID</string>
+    <string name="notification_channel_2_name">General App Notifications Channel</string>
+    <string name="notification_channel_2_description">serves for routine all other notifications</string>
+
+</resources>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+    <include layout="@layout/collapsing_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView_frag_home"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                app:layout_constraintStart_toEndOf="@id/guide_vertical_1"
+                app:layout_constraintEnd_toStartOf="@id/guide_vertical_2"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="24dp"
+                app:queryHint="Search"
+                android:background="@drawable/search_view_selector"/>
+
+            <TextView
+                android:id="@+id/tvQuickActions_frag_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/guide_vertical_1"
+                app:layout_constraintTop_toBottomOf="@id/searchView_frag_home"
+                android:layout_marginTop="32dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/appTextColor3"
+                android:text="Quick Actions"/>
+
+            <include
+                android:id="@+id/layout_quick_actions_doctor"
+                layout="@layout/layout_quick_actions_doctor"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                app:layout_constraintStart_toEndOf="@id/guide_vertical_1"
+                app:layout_constraintEnd_toStartOf="@id/guide_vertical_2"
+                app:layout_constraintTop_toBottomOf="@id/tvQuickActions_frag_home"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/tvTalk_frag_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/guide_vertical_1"
+                app:layout_constraintEnd_toStartOf="@id/guide_vertical_2"
+                app:layout_constraintTop_toBottomOf="@id/layout_quick_actions_doctor"
+                app:layout_constraintHorizontal_bias="0"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/appTextColor3"
+                android:text="Talk to a Doctor"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHealthAreas_frag_home"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toEndOf="@id/guide_vertical_1"
+                app:layout_constraintEnd_toStartOf="@id/guide_vertical_2"
+                app:layout_constraintTop_toBottomOf="@id/tvTalk_frag_home"
+                android:layout_marginTop="10dp"
+                tools:listitem="@layout/li_health_areas"/>
+
+            <TextView
+                android:id="@+id/tvUpcomingConsultations_frag_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/guide_vertical_1"
+                app:layout_constraintTop_toBottomOf="@id/rvHealthAreas_frag_home"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/appTextColor3"
+                android:text="Upcoming Consultations"/>
+
+            <TextView
+                android:id="@+id/tvSeeAll_upcomingCons_frag_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@id/guide_vertical_2"
+                app:layout_constraintTop_toTopOf="@id/tvUpcomingConsultations_frag_home"
+                android:textSize="16sp"
+                android:textColor="#F6B63B"
+                android:text="See All"/>
+
+            <include
+                android:id="@+id/layout_schedule_card"
+                layout="@layout/layout_schedule_frag_home"
+                android:layout_width="0dp"
+                android:layout_height="170dp"
+                app:layout_constraintStart_toEndOf="@id/guide_vertical_1"
+                app:layout_constraintEnd_toStartOf="@id/guide_vertical_2"
+                app:layout_constraintTop_toBottomOf="@id/tvUpcomingConsultations_frag_home"
+                android:layout_marginTop="10dp"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_vertical_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".04"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide_vertical_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".96"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

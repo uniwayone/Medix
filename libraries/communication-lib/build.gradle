@@ -1,0 +1,79 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+apply from: "${rootProject.projectDir}/dependencies.gradle"
+
+android {
+    compileSdk sdk_details.compileSDK
+
+    defaultConfig {
+        minSdk sdk_details.minSDK
+        targetSdk sdk_details.targetSDK
+        versionCode sdk_details.versionCode
+        versionName sdk_details.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled sdk_details.minifyEnabled
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled sdk_details.minifyEnabled
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    /* for Robolectric and Jupiter */
+    testOptions{
+        animationsDisabled = true
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+}
+
+dependencies {
+    implementation project(path: ':libraries:di-base-lib')
+    implementation project(path: ':libraries:constants-lib')
+    implementation project(path: ':libraries:utils-lib')
+    implementation project(path: ':libraries:firebase-commons-lib')
+    implementation project(path: ':libraries:models-commons-lib')
+    implementation project(path: ':libraries:data-lib')
+    implementation project(path: ':libraries:fcm-api-lib')
+    implementation project(path: ':libraries:controller-lib')
+
+    implementation impl_depends.coroutines_android
+    implementation impl_depends.retrofit
+    implementation impl_depends.timber
+    implementation impl_depends.rxjava
+
+    implementation impl_depends.dagger
+    kapt kapt_depends.dagger_kapt
+
+    testImplementation impl_depends.room
+    testImplementation impl_depends.room_runtime
+    testImplementation impl_depends.rxandroid
+
+    testImplementation test_depends.junit
+    testImplementation test_depends.mockito_kotlin
+    testImplementation test_depends.core_testing
+    testImplementation test_depends.robolectric
+    testImplementation test_depends.coroutines_testing
+    testImplementation test_depends.mock_webserver
+    androidTestImplementation test_depends.dexmaker
+    androidTestImplementation test_depends.android_junit
+}

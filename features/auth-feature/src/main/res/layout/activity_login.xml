@@ -1,0 +1,215 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootView">
+
+    <include
+        layout="@layout/layout_appbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <app.slyworks.base_feature.custom_views.NetworkStatusView
+        android:id="@+id/network_status_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <app.slyworks.base_feature.custom_views.ProgressOverlayView
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="gone"
+        android:elevation="10dp" />
+
+    <ImageView
+        android:id="@+id/ivEmail"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toEndOf="@id/guide_vertical_1"
+        app:layout_constraintTop_toBottomOf="@id/guide_horizontal_1"
+        android:src="@drawable/ic_email"
+        app:tint="@color/appIVTint" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Email"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivEmail"
+        app:layout_constraintTop_toBottomOf="@id/guide_horizontal_1" />
+
+        <EditText
+            android:id="@+id/etLoginEmail"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/et_selector"
+            android:inputType="textPersonName|textEmailAddress"
+            android:imeOptions="actionNext"
+            android:paddingStart="@dimen/et_padding"
+            android:paddingEnd="@dimen/et_padding"
+            app:layout_constraintEnd_toStartOf="@id/guide_vertical_2"
+            app:layout_constraintStart_toEndOf="@id/guide_vertical_1"
+            app:layout_constraintTop_toBottomOf="@id/ivEmail" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLoginPassword"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            app:layout_constraintEnd_toStartOf="@id/guide_vertical_2"
+            app:layout_constraintStart_toEndOf="@id/guide_vertical_1"
+            app:layout_constraintTop_toBottomOf="@id/ivPassword"
+            app:passwordToggleEnabled="true"
+            style="@style/TextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etLoginPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/et_selector"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:inputType="textPassword"
+            android:layout_marginTop="8dp"
+            android:imeOptions="actionDone"
+            android:imeActionId="6"
+            android:paddingStart="@dimen/et_padding"
+            android:paddingEnd="@dimen/et_padding" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/ivPassword"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toEndOf="@id/guide_vertical_1"
+        app:layout_constraintTop_toBottomOf="@id/etLoginEmail"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_lock"
+        app:tint="@color/appIVTint" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:text="Password"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivPassword"
+        app:layout_constraintTop_toBottomOf="@id/etLoginEmail" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLoginLogin"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/btn_login_selector"
+            android:enabled="false"
+            android:fontFamily="@font/chivo_regular"
+            android:stateListAnimator="@xml/btn_state_list_animator"
+            android:text="login"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@id/guide_vertical_2"
+            app:layout_constraintStart_toEndOf="@id/guide_vertical_1"
+            app:layout_constraintTop_toBottomOf="@id/tvLoginForgotPassword" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvLoginForgotPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="end"
+            android:paddingEnd="4dp"
+            android:text="@string/forgot_password"
+            android:textColor="@color/appBlue"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@id/guide_vertical_2"
+            app:layout_constraintStart_toEndOf="@id/guide_vertical_1"
+            app:layout_constraintTop_toBottomOf="@id/tilLoginPassword" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvLoginRegister_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="end"
+            android:text="Not a user? "
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@id/barrier_vertical_1"
+            app:layout_constraintStart_toStartOf="@+id/guide_vertical_1"
+            app:layout_constraintTop_toBottomOf="@id/btnLoginLogin" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvLoginRegister_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="start"
+            android:text="@string/register_here"
+            android:textColor="@color/appBlue"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@id/guide_vertical_2"
+            app:layout_constraintStart_toEndOf="@id/guide_vertical_3"
+            app:layout_constraintTop_toBottomOf="@id/btnLoginLogin" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_vertical_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="tvLoginRegister_2"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_vertical_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".05"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_vertical_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintGuide_percent="0.95"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_vertical_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_horizontal_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".2"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

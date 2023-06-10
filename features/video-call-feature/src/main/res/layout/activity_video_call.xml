@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.video_call_activity.VideoCallActivity"
+    android:id="@+id/rootView">
+
+    <!--TODO:put a black overlay over the preview view-->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/pv_videocall"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:visibility="visible"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@android:color/transparent"
+        android:elevation="1dp">
+
+        <FrameLayout
+            android:id="@+id/flMainVideoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@android:color/background_light" />
+
+        <FrameLayout
+            android:id="@+id/flSmallVideoContainer"
+            android:layout_width="120dp"
+            android:layout_height="180dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@android:color/darker_gray"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias=".1"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/guide_vertical_1"
+            app:layout_constraintEnd_toStartOf="@id/guide_vertical_3"
+            app:layout_constraintTop_toBottomOf="@id/iv_profile"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:maxLines="1"
+            android:gravity="center"
+            android:ellipsize="end"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_toggle_mute"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:layout_constraintStart_toStartOf="@id/guide_vertical_1"
+            app:layout_constraintEnd_toEndOf="@id/guide_vertical_1"
+            app:layout_constraintBottom_toTopOf="@id/guide_horizontal_3"
+            android:src="@drawable/ic_mic_off"
+            android:tint="@color/white"
+            android:backgroundTint="@android:color/transparent"
+            android:outlineSpotShadowColor="@android:color/transparent"
+            app:maxImageSize="25dp"
+            app:fabCustomSize="45dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_end_call"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toStartOf="@id/guide_vertical_2"
+            app:layout_constraintEnd_toEndOf="@id/guide_vertical_2"
+            app:layout_constraintBottom_toTopOf="@id/guide_horizontal_3"
+            android:src="@drawable/ic_call_end"
+            android:tint="@color/white"
+            android:backgroundTint="@color/appRed"
+            android:outlineSpotShadowColor="@android:color/transparent"
+            app:maxImageSize="25dp"
+            app:fabCustomSize="60dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_switch_video"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:layout_constraintStart_toStartOf="@id/guide_vertical_3"
+            app:layout_constraintEnd_toEndOf="@id/guide_vertical_3"
+            app:layout_constraintBottom_toTopOf="@id/guide_horizontal_3"
+            android:src="@drawable/ic_switch_video"
+            android:tint="@color/white"
+            android:backgroundTint="@android:color/transparent"
+            android:outlineSpotShadowColor="@android:color/transparent"
+            app:maxImageSize="25dp"
+            app:fabCustomSize="45dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_accept_call"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toStartOf="@id/guide_vertical_4"
+            app:layout_constraintEnd_toEndOf="@id/guide_vertical_4"
+            app:layout_constraintBottom_toTopOf="@id/guide_horizontal_3"
+            android:src="@drawable/ic_voice_call"
+            android:tint="@color/white"
+            android:backgroundTint="@color/appGreen"
+            app:maxImageSize="25dp"
+            app:fabCustomSize="60dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_decline_call"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toStartOf="@id/guide_vertical_5"
+            app:layout_constraintEnd_toEndOf="@id/guide_vertical_5"
+            app:layout_constraintBottom_toTopOf="@id/guide_horizontal_3"
+            android:src="@drawable/ic_call_end"
+            android:tint="@color/white"
+            android:backgroundTint="@color/appRed"
+            android:outlineSpotShadowColor="@android:color/transparent"
+            app:maxImageSize="25dp"
+            app:fabCustomSize="60dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_vertical_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".2"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_vertical_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".5"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_vertical_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".8"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_vertical_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".35"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_vertical_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".65"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_horizontal_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".98"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

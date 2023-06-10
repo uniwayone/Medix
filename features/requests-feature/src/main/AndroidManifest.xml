@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.slyworks.requests_feature">
+
+    <application
+        android:theme="@style/Theme.Medix">
+
+        <activity
+            android:name=".RequestsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="app.slyworks.requests_feature.RequestsActivity.open" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
