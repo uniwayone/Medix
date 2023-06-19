@@ -8,9 +8,6 @@ import java.io.StringWriter
 import kotlin.system.exitProcess
 
 
-/**
- * Created by Joshua Sylvanus, 8:51 PM, 09/08/2022.
- */
 class UniversalExceptionHandler(private val context: Context) : Thread.UncaughtExceptionHandler {
     //region Vars
     private val newLine = "\n"
