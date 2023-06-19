@@ -12,11 +12,6 @@ import app.slyworks.di_base_lib.AppComponent
 import timber.log.Timber
 
 
-/**
- * Created by Joshua Sylvanus, 3:59 PM, 12/10/2021.
- */
-
-
 /*TODO:add dynamic feature module*/
 class App: Application() {
 
